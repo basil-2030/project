@@ -4,12 +4,12 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding-top: 70px; /* ترك مساحة للمنيو الثابت [cite: 45] */
+    padding-top: 70px; /* ترك مساحة للمنيو الثابت */
     background-color: #f9f9f9;
     color: #333;
 }
 
-/* القائمة العلوية الثابتة [cite: 45] */
+/* القائمة العلوية الثابتة */
 .navbar {
     position: fixed;
     top: 0;
@@ -37,7 +37,7 @@ body {
     font-weight: bold;
 }
 
-/* تنسيق الجداول لتكون احترافية [cite: 49, 53, 60] */
+/* تنسيق الجداول لتكون احترافية */
 table {
     width: 90%;
     margin: 20px auto;
@@ -55,22 +55,21 @@ th {
     background-color: #ecf0f1;
 }
 
-/* تنسيق المراجع (صورة بجانب العنوان) [cite: 56] */
-/* تنسيق قسم المراجع */
+/* تنسيق المراجع (صورة بجانب العنوان) */
 .reference-item {
-    display: flex;         /* يجعل الصورة والنص بجانب بعضهما */
-    align-items: center;   /* محاذاة عمودية متساوية */
-    gap: 20px;            /* مسافة بين الصورة والرابط */
+    display: flex;         
+    align-items: center;   
+    gap: 20px;             
     padding: 15px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف للجمالية */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     margin: 20px 0;
 }
 
 .reference-item img {
-    width: 120px;          /* تحكم في عرض الصورة هنا */
-    height: auto;          /* يحافظ على أبعاد الصورة */
+    width: 120px;          
+    height: auto;          
     border: 1px solid #ddd;
 }
 
@@ -83,5 +82,60 @@ th {
 
 .reference-item a:hover {
     color: #3498db;
-    text-decoration: underline;
+    text-decoration: underline; 
+}
+
+
+/* =========================================
+   تنسيقات صفحة فريق العمل (Team Page)
+   ========================================= */
+
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    padding: 30px 20px;
+    width: 260px; 
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.team-card:hover {
+    transform: translateY(-10px); 
+}
+
+.team-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid #2c3e50; 
+    margin-bottom: 15px;
+}
+
+.team-card h4 {
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.team-card .email {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+    word-break: break-all; 
 }
