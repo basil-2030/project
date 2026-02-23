@@ -1,195 +1,243 @@
-/* =========
-   Palette
-   ========= */
-:root{
-  /* UQU-like palette */
-  --bg:#ffffff;             /* page background */
-  --fg:#1f2937;             /* main text */
-  --muted:#6b7280;          /* secondary text */
-  --primary:#4f2d7f;        /* deep purple for headers/bars */
-  --accent:#00a6ce;         /* cyan for section headings/links */
-  --surface:#f3f4f6;        /* cards/tables background */
-  --border:#d9dde3;         /* borders */
-  --thead:#4f2d7f;          /* table header background */
-  --thead-fg:#ffffff;       /* table header text */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-top: 70px; /* ترك مساحة للمنيو الثابت */
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* (اختياري) وضع داكن متوافق */
-body.theme-dark{
-  --bg:#0d1117;
-  --fg:#e6edf3;
-  --muted:#9aa4b2;
-  --primary:#8f6bd9;
-  --accent:#42c7e5;
-  --surface:#111827;
-  --border:#263041;
-  --thead:#8f6bd9;
-  --thead-fg:#0b0f15;
+/* القائمة العلوية الثابتة */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
-/* =========
-   Base
-   ========= */
-html{ scroll-behavior:smooth; }
-body{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin:0;
-  padding-top:70px;             /* مساحة للمنيو الثابت */
-  background-color:var(--bg);
-  color:var(--fg);
-  line-height:1.65;
-}
-.container{ max-width:1100px; margin:0 auto; padding:0 1rem 2rem; }
-
-/* =========
-   Navbar
-   ========= */
-.navbar{
-  position:fixed; top:0; left:0; width:100%;
-  background-color:var(--primary);
-  padding:10px 0; z-index:1000;
-  border-bottom:4px solid color-mix(in srgb, var(--primary) 70%, black 30%);
-}
-.navbar ul{
-  list-style:none; display:flex; justify-content:center; gap:18px;
-  margin:0; padding:0 12px; flex-wrap:wrap;
-}
-.navbar a{
-  color:#fff; text-decoration:none; font-weight:700;
-  padding:.35rem .6rem; border-radius:.4rem;
-  border:1px solid transparent;
-}
-.navbar a:hover,
-.navbar a:focus{
-  border-color:#ffffff33;
-  background:color-mix(in srgb, var(--primary) 80%, white 20%);
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-/* =========
-   Header
-   ========= */
-.page-hero{
-  padding:18px 1rem;
-  border-bottom:1px solid var(--border);
-}
-.page-hero h1{
-  margin:.25rem 0 0 0;
-  color:var(--primary);
-  font-size:1.9rem;
-  font-weight:800;
+.navbar li {
+    margin: 0 15px;
 }
 
-/* =========
-   Sections
-   ========= */
-.section{ padding:2rem 0; border-bottom:1px solid var(--border); }
-.section h2{
-  margin:0 0 .75rem 0;
-  color:var(--accent);
-  font-size:1.35rem;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* =========
-   Cards / helpers
-   ========= */
-.card{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:.5rem;
-  padding:1rem;
-}
-.mark-accent{ color:var(--accent); font-weight:700; }
-.mark-danger{
-  color:#b91c1c;              /* أحمر أنيق لعبارات None */
-  font-weight:700;
-}
-.tight-ol{ padding-inline-start:1.25rem; }
-.tight-ol > li{ margin:.3rem 0; }
-
-/* =========
-   Tables
-   ========= */
-.table{
-  width:100%;
-  border-collapse:collapse;
-  background:var(--surface);
-  border:1px solid var(--border);
-}
-.table th, .table td{
-  padding:12px .9rem;
-  text-align:start;
-  border-bottom:1px solid var(--border);
-}
-.table thead th{
-  background:var(--thead);
-  color:var(--thead-fg);
-  font-weight:700;
-}
-.group-row td:first-child{
-  font-weight:700;
-}
-.group-row td{
-  background:color-mix(in srgb, var(--accent) 16%, var(--surface) 84%);
-  color:#0b0f15;
-  border-bottom:1px solid var(--border);
+/* تنسيق الجداول لتكون احترافية */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
 }
 
-/* =========
-   References
-   ========= */
-.reference-item{
-  display:flex; align-items:center; gap:20px;
-  padding:15px; background:#fff;
-  border-radius:8px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.06);
-  margin:20px 0;
-  border:1px solid var(--border);
-}
-.reference-item img{
-  width:120px; height:auto; border:1px solid #ddd;
-}
-.reference-item a{
-  text-decoration:none; color:var(--primary); font-weight:700; font-size:1.05rem;
-}
-.reference-item a:hover{
-  color:var(--accent); text-decoration:underline;
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: start;
 }
 
-/* =========
-   Team Page (shared)
-   ========= */
-.team-section{ text-align:center; padding:40px 20px; }
-.team-container{
-  display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:20px;
-}
-.team-card{
-  background:#ffffff; border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
-  padding:30px 20px; width:260px; text-align:center;
-  transition:transform .3s ease;
-  border:1px solid var(--border);
-}
-.team-card:hover{ transform:translateY(-10px); }
-.team-img{
-  width:130px; height:130px; border-radius:50%; object-fit:cover;
-  border:4px solid var(--primary); margin-bottom:15px;
-}
-.team-card h4{ color:#555; margin-top:-10px; margin-bottom:15px; font-weight:600; }
-.team-card .email{ font-size:.85em; color:#777; margin-top:10px; word-break:break-all; }
-
-/* =========
-   Responsive
-   ========= */
-@media (max-width: 768px){
-  .navbar ul{ flex-wrap:wrap; justify-content:center; padding:5px; gap:10px; }
-  .navbar a{ padding:.3rem .5rem; }
-  body{ padding-top:140px; }               /* القائمة قد تصبح سطرين */
-  .table{ display:block; overflow-x:auto; white-space:nowrap; width:100%; }
-  .page-hero h1{ font-size:1.25rem; }
-  .reference-item{ flex-direction:column; text-align:center; }
-  .team-container{ gap:20px; }
+th {
+    background-color: #ecf0f1;
 }
 
-/* (للرجوع) إن كنت تستعمل هذه الفئات سابقًا */
-.clo-header{ background-color:#4db6ac !important; color:#fff !important; }
-.main-table-header{ background-color:#3f51b5 !important; color:#fff !important; }
+/* تنسيق المراجع (صورة بجانب العنوان) */
+.reference-item {
+    display: flex;         
+    align-items: center;   
+    gap: 20px;             
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    margin: 20px 0;
+}
+
+.reference-item img {
+    width: 120px;          
+    height: auto;          
+    border: 1px solid #ddd;
+}
+
+.reference-item a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.reference-item a:hover {
+    color: #3498db;
+    text-decoration: underline; 
+}
+
+
+/* =========================================
+   تنسيقات صفحة فريق العمل (Team Page)
+   ========================================= */
+
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    padding: 30px 20px;
+    width: 260px; 
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.team-card:hover {
+    transform: translateY(-10px); 
+}
+
+.team-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid #2c3e50; 
+    margin-bottom: 15px;
+}
+
+.team-card h4 {
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.team-card .email {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+    word-break: break-all; 
+}
+
+/* =================================================
+   تنسيقات خاصة للجوال (Mobile Responsive)
+   ================================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. القائمة العلوية: تنزل العناصر لسطر جديد إذا ما كفت */
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .navbar li {
+        margin: 3px 8px; /* تقليل المسافة بين الروابط */
+    }
+
+    /* زيادة المسافة العلوية للصفحة لأن القائمة صارت سطرين */
+    body {
+        padding-top: 140px; 
+    }
+
+    /* 2. الجدول: الحل السحري للسحب يمين ويسار */
+    table {
+        display: block;
+        overflow-x: auto; /* يسمح بالتمرير الأفقي */
+        white-space: nowrap; /* يمنع النص من الانعفاس */
+        width: 100%;
+    }
+
+    /* 3. تصغير العناوين الكبيرة */
+    h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    /* 4. تنسيق البطاقات والمراجع لتكون تحت بعض */
+    .reference-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-container {
+        gap: 20px;
+    }
+}
+
+/* تنسيق صفوف العناوين في جدول مخرجات التعلم لتطابق الصورة */
+.clo-header {
+    background-color: #4db6ac !important; /* اللون السماوي من الصورة */
+    color: white !important;
+}
+
+.main-table-header {
+    background-color: #3f51b5 !important; /* اللون الكحلي لرأس الجدول */
+    color: white !important;
+}
+
+/* =========================================
+   إضافات بسيطة للأقسام الجديدة فقط
+   ========================================= */
+
+/* عنوان فرعي بالفيروزي كما في اللقطة */
+.accent-title{
+    color:#00a6ce;
+    margin: 28px auto 8px;
+    width: 90%;
+}
+.accent-title .muted{
+    color:#666; font-weight: normal; font-size: .95em;
+}
+
+/* جدول بنفسجي للرأس (لا يؤثر على بقية الجداول) */
+.uqu-table{
+    width: 90%;
+    margin: 12px auto 24px;
+    border-collapse: collapse;
+    background: #fff;
+}
+.uqu-table th, .uqu-table td{
+    border: 1px solid #d9dde3;
+    padding: 12px;
+    text-align: start;
+}
+.uqu-table thead th{
+    background: #4f2d7f;  /* بنفسجي غامق */
+    color: #fff;
+    font-weight: 700;
+}
+.uqu-table tbody tr:nth-child(even){
+    background: #fafafa;
+}
+
+/* قائمة فرعية داخل خلية "Hybrid" */
+.uqu-sublist{
+    margin:.35rem 0 .35rem 1.25rem;
+}
+
+/* صف الإجمالي بالفيروزي */
+.total-row td{
+    background:#00a6ce; color:#fff; font-weight:700;
+}
