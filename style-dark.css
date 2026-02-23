@@ -1,1 +1,118 @@
+/* =========================================
+   تنسيقات الوضع الداكن (Dark Mode)
+   ========================================= */
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-top: 70px;
+    background-color: #121212; /* خلفية سوداء */
+    color: #e0e0e0; /* نص أبيض */
+}
+
+/* القائمة العلوية */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000; /* شريط أسود تماماً */
+    padding: 10px 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #f1c40f;
+}
+
+/* الجداول */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #1e1e1e; /* خلفية الجدول غامقة */
+    color: #e0e0e0;
+}
+
+th, td {
+    border: 1px solid #444; /* حدود رمادية */
+    padding: 12px;
+    text-align: start;
+}
+
+th {
+    background-color: #333; /* رأس الجدول رمادي غامق */
+    color: #fff;
+}
+
+/* الروابط */
+a {
+    color: #64b5f6;
+}
+
+/* المراجع */
+.reference-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #1e1e1e; /* خلفية المراجع غامقة */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+    margin: 20px 0;
+}
+
+.reference-item img {
+    width: 120px;
+    height: auto;
+    border: 1px solid #444;
+}
+
+.reference-item a {
+    color: #90caf9;
+}
+
+/* بطاقات الفريق (Team Cards) في الوضع الداكن */
+.team-section {
+    background-color: #121212;
+}
+
+.team-card {
+    background-color: #1e1e1e; /* بطاقة غامقة */
+    box-shadow: 0 4px 15px rgba(255,255,255,0.05);
+    border: 1px solid #333;
+}
+
+.team-card h3, .team-card h4 {
+    color: #e0e0e0;
+}
+
+.team-card .email {
+    color: #bbb;
+}
+
+.team-img {
+    border-color: #f1c40f; /* إطار الصورة ذهبي لكسر السواد */
+}
