@@ -186,3 +186,14 @@ th {
         gap: 20px;
     }
 }
+
+/* تنسيق صفوف العناوين في جدول مخرجات التعلم لتطابق الصورة */
+.clo-header {
+    background-color: #4db6ac !important; /* اللون السماوي من الصورة */
+    color: white !important;
+}
+
+.main-table-header {
+    background-color: #3f51b5 !important; /* اللون الكحلي لرأس الجدول */
+    color: white !important;
+}
