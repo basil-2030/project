@@ -139,3 +139,50 @@ th {
     margin-top: 10px;
     word-break: break-all; 
 }
+
+/* =================================================
+   تنسيقات خاصة للجوال (Mobile Responsive)
+   أضف هذا الكود في آخر الملف
+   ================================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. القائمة العلوية: تنزل العناصر لسطر جديد إذا ما كفت */
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .navbar li {
+        margin: 3px 8px; /* تقليل المسافة بين الروابط */
+    }
+
+    /* زيادة المسافة العلوية للصفحة لأن القائمة صارت سطرين */
+    body {
+        padding-top: 140px; 
+    }
+
+    /* 2. الجدول: الحل السحري للسحب يمين ويسار */
+    table {
+        display: block;
+        overflow-x: auto; /* يسمح بالتمرير الأفقي */
+        white-space: nowrap; /* يمنع النص من الانعفاس */
+        width: 100%;
+    }
+
+    /* 3. تصغير العناوين الكبيرة */
+    h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    /* 4. تنسيق البطاقات والمراجع لتكون تحت بعض */
+    .reference-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-container {
+        gap: 20px;
+    }
+}
