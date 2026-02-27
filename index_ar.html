@@ -6,7 +6,7 @@
     <title>مواصفات المقرر - HCI 2204</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* تنسيق لضمان ظهور النص بجانب الصور بشكل مرتب - متطلب رقم 56 */
+        /* تنسيق لضمان ظهور النص بجانب الصور بشكل مرتب */
         .book-container {
             display: flex;
             flex-direction: column;
@@ -15,8 +15,8 @@
         }
         .book-item {
             display: flex;
-            align-items: center; 
-            gap: 15px; 
+            align-items: center; /* محاذاة النص مع منتصف الصورة عمودياً */
+            gap: 15px; /* مسافة بين الصورة والنص */
         }
         .reference-item img {
             border: 1px solid #ddd;
@@ -33,13 +33,12 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">English</a></li>
             <li><a href="#info">معلومات عامة</a></li>
             <li><a href="#clos">مخرجات التعلم</a></li>
             <li><a href="#topics">المحتوى</a></li>
             <li><a href="#assessment">التقييم</a></li>
             <li><a href="#references">المراجع</a></li>
-            <li><a href="team.html">الفريق</a></li>
+            <li><a href="index.html">English</a></li> <li><a href="team.html">الفريق</a></li>
         </ul>
     </nav>
 
@@ -83,7 +82,7 @@
                 <p><strong>3. المستوى/السنة التي يقدم فيها المقرر:</strong> السنة الثانية / المستوى الرابع</p>
                 
                 <p><strong>4. الوصف العام للمقرر:</strong><br>
-                يتناول هذا المقرر الاعتبارات الأخلاقية التي تنشأ في تفاعل الإنسان مع الحاسب، مع التركيز على المبادئ الأخلاقية، الخصوصية، الملكية الفكرية، والمسؤوليات الاجتماعية. سيقوم الطلاب بتحليل المعضلات والأطر الأخلاقية، واستكشاف الشمولية وإمكانية الوصول، وتقييم التأثيرات المجتمعية لممارسات HCI والتقنيات الناشئة.</p>
+                يتناول هذا المقرر الاعتبارات الأخلاقية التي تنشأ في تفاعل الإنسان مع الحاسب، مع التركيز على المبادئ الأخلاقية، الخصوصية، الملكية الفكرية، والمسؤوليات الاجتماعية.</p>
                 
                 <p><strong>5. المتطلبات السابقة للمقرر:</strong> لا يوجد</p>
                 <p><strong>6. المتطلبات المتزامنة للمقرر:</strong> لا يوجد</p>
@@ -93,10 +92,23 @@
                     <li>فهم المبادئ والأطر الأخلاقية المطبقة في تفاعل الإنسان مع الحاسب.</li>
                     <li>تحليل المعضلات الأخلاقية في التكنولوجيا واقتراح حلول مدروسة.</li>
                     <li>تقدير أهمية الشمولية والخصوصية والأمن في تصميم تفاعل الإنسان مع الحاسب.</li>
-                    <li>استكشاف التأثيرات المجتمعية للتقنيات الناشئة والأنظمة البيئية عبر الإنترنت.</li>
-                    <li>تطوير مهارات التفكير النقدي والاستدلال الأخلاقي لمواجهة التحديات المهنية في HCI.</li>
                 </ul>
             </div>
+
+            <h3 class="sub-heading">2. نمط التدريس</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>نمط التدريس</th>
+                        <th>ساعات الاتصال</th>
+                        <th>النسبة المئوية</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>الفصول الدراسية التقليدية</td><td>30</td><td>100%</td></tr>
+                </tbody>
+            </table>
         </section>
 
         <hr class="page-divider">
@@ -108,19 +120,16 @@
                     <tr>
                         <th>الرمز</th>
                         <th>مخرجات تعلم المقرر</th>
-                        <th>رمز مخرجات البرنامج</th>
                         <th>استراتيجيات التدريس</th>
                         <th>طرق التقييم</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="category-row"><td colspan="5"><strong>1.0 المعرفة والفهم</strong></td></tr>
                     <tr>
                         <td>1.1</td>
                         <td>شرح الأطر الأخلاقية والقانونية والاجتماعية ذات الصلة بـ HCI.</td>
-                        <td>K4</td>
                         <td>مناقشات، دراسة حالات</td>
-                        <td>تكاليف / اختبارات</td>
+                        <td>تكاليف / اختبارات قصيرة</td>
                     </tr>
                 </tbody>
             </table>
@@ -130,18 +139,38 @@
 
         <section id="topics">
             <h2 class="section-heading">ج. محتوى المقرر</h2>
-            <ol>
-                <li>مقدمة في الأخلاقيات في تفاعل الإنسان مع الحاسب</li>
-                <li>الأطر والنظريات الأخلاقية</li>
-                <li>الخصوصية والأمن والحريات المدنية</li>
-                <li>الملكية الفكرية وأخلاقيات البرمجيات</li>
-                <li>الآثار الاجتماعية للحوسبة</li>
-                <li>الشمولية وإمكانية الوصول والسياقات الثقافية</li>
-                <li>المسؤولية المهنية في HCI</li>
-                <li>التقنيات الناشئة والتحديات الأخلاقية</li>
-                <li>دراسات حالة في أخلاقيات HCI</li>
-                <li>البحث والتجريب الأخلاقي</li>
-            </ol>
+            <table>
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>قائمة الموضوعات</th> <th>ساعات الاتصال</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>مقدمة في الأخلاقيات في تفاعل الإنسان مع الحاسب</td><td>2</td></tr>
+                    <tr><td>2</td><td>الأطر والنظريات الأخلاقية</td><td>4</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr class="page-divider">
+
+        <section id="assessment">
+            <h2 class="section-heading">د. أنشطة تقييم الطلاب</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>نشاط التقييم</th>
+                        <th>الأسبوع</th>
+                        <th>النسبة المئوية</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>اختبارات قصيرة</td><td>3-14</td><td>10%</td></tr>
+                    <tr><td>2</td><td>تكاليف</td><td>3-14</td><td>10%</td></tr>
+                </tbody>
+            </table>
         </section>
 
         <hr class="page-divider">
@@ -152,18 +181,18 @@
             <div class="book-container">
                 <div class="book-item">
                     <div class="reference-item">
-                        <a href="https://books.google.com.sa/books?id=pMI7CwAAQBAJ" target="_blank">
-                            <img src="https://www.wiley.com/storefront-pdp-assets/_next/image?url=https%3A%2F%2Fmedia.wiley.com%2Fproduct_data%2FcoverImage300%2F53%2F11192397%2F1119239753.jpg&w=640&q=75" alt="Ethics and Technology" width="100"/>
+                        <a href="https://books.google.com.sa/books?id=pMI7CwAAQBAJ&printsec=frontcover&hl=ar" target="_blank" rel="noopener">
+                            <img src="https://www.wiley.com/storefront-pdp-assets/_next/image?url=https%3A%2F%2Fmedia.wiley.com%2Fproduct_data%2FcoverImage300%2F53%2F11192397%2F1119239753.jpg&w=640&q=75" alt="Ethics and Technology Cover" width="100"/>
                         </a>
                     </div>
                     <p>
-                        <a href="https://books.google.com.sa/books?id=pMI7CwAAQBAJ" target="_blank" style="color: blue; text-decoration: underline;">
+                        <a href="https://books.google.com.sa/books?id=pMI7CwAAQBAJ&printsec=frontcover&hl=ar" target="_blank" style="color: blue; text-decoration: underline;">
                             <strong>الأخلاق والتكنولوجيا: المعضلات والأسئلة واستراتيجيات الحوسبة الأخلاقية</strong>، تأليف هيرمان تافاني (2023)
                         </a>
                     </p>
                 </div>
             </div>
-            </section>
+        </section>
     </main>
 
     <footer>
