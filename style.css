@@ -145,7 +145,6 @@ th {
    ================================================= */
 @media screen and (max-width: 768px) {
 
-    /* 1. القائمة العلوية: تنزل العناصر لسطر جديد إذا ما كفت */
     .navbar ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -153,29 +152,25 @@ th {
     }
 
     .navbar li {
-        margin: 3px 8px; /* تقليل المسافة بين الروابط */
+        margin: 3px 8px; 
     }
 
-    /* زيادة المسافة العلوية للصفحة لأن القائمة صارت سطرين */
     body {
         padding-top: 140px; 
     }
 
-    /* 2. الجدول: الحل السحري للسحب يمين ويسار */
     table {
         display: block;
-        overflow-x: auto; /* يسمح بالتمرير الأفقي */
-        white-space: nowrap; /* يمنع النص من الانعفاس */
+        overflow-x: auto; 
+        white-space: nowrap; 
         width: 100%;
     }
 
-    /* 3. تصغير العناوين الكبيرة */
     h1 {
         font-size: 20px;
         padding: 0 10px;
     }
 
-    /* 4. تنسيق البطاقات والمراجع لتكون تحت بعض */
     .reference-item {
         flex-direction: column;
         text-align: center;
@@ -186,22 +181,17 @@ th {
     }
 }
 
-/* تنسيق صفوف العناوين في جدول مخرجات التعلم لتطابق الصورة */
 .clo-header {
-    background-color: #4db6ac !important; /* اللون السماوي من الصورة */
+    background-color: #4db6ac !important; 
     color: white !important;
 }
 
 .main-table-header {
-    background-color: #3f51b5 !important; /* اللون الكحلي لرأس الجدول */
+    background-color: #3f51b5 !important; 
     color: white !important;
 }
 
-/* =========================================
-   إضافات بسيطة للأقسام الجديدة فقط
-   ========================================= */
-
-/* عنوان فرعي بالفيروزي كما في اللقطة */
+/* عنوان فرعي بالفيروزي */
 .accent-title{
     color:#00a6ce;
     margin: 28px auto 8px;
@@ -211,7 +201,7 @@ th {
     color:#666; font-weight: normal; font-size: .95em;
 }
 
-/* جدول بنفسجي للرأس (لا يؤثر على بقية الجداول) */
+/* جدول الرأس */
 .uqu-table{
     width: 90%;
     margin: 12px auto 24px;
@@ -224,7 +214,7 @@ th {
     text-align: start;
 }
 .uqu-table thead th{
-    background: #4f2d7f;  /* بنفسجي غامق */
+    background: #4f2d7f;  
     color: #fff;
     font-weight: 700;
 }
@@ -232,12 +222,59 @@ th {
     background: #fafafa;
 }
 
-/* قائمة فرعية داخل خلية "Hybrid" */
-.uqu-sublist{
-    margin:.35rem 0 .35rem 1.25rem;
-}
-
-/* صف الإجمالي بالفيروزي */
 .total-row td{
     background:#00a6ce; color:#fff; font-weight:700;
+}
+
+/* =========================================
+   إضافة: تنسيقات الوضع الداكن (Dark Mode)
+   ========================================= */
+
+/* عند إضافة class="dark-mode" للـ body تتغير الألوان تلقائياً */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar {
+    background-color: #1a1a1a;
+}
+
+.dark-mode table, 
+.dark-mode .uqu-table,
+.dark-mode .reference-item,
+.dark-mode .team-card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+.dark-mode th, 
+.dark-mode .uqu-table thead th {
+    background-color: #333;
+    color: #bb86fc; /* لون مميز للعناوين في الوضع الداكن */
+    border-color: #444;
+}
+
+.dark-mode td, .dark-mode .uqu-table td {
+    border-color: #333;
+}
+
+.dark-mode .reference-item a, 
+.dark-mode .team-card h4 {
+    color: #bb86fc;
+}
+
+.dark-mode .team-card .email, 
+.dark-mode .team-card h4,
+.dark-mode .accent-title .muted {
+    color: #aaa;
+}
+
+.dark-mode .team-card {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.dark-mode .uqu-table tbody tr:nth-child(even) {
+    background: #252525;
 }
