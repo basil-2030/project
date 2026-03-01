@@ -6,28 +6,28 @@
     <title>Course Specification - HCI 2204 (Dark Mode)</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* تطبيق الوضع الداكن مباشرة في الـ CSS */
+        /* CSS للوضع الداكن مدمج لضمان عمله فوراً */
         body {
-            background-color: #121212; /* لون خلفية الصفحة داكن */
-            color: #e0e0e0; /* لون النص فاتح للتباين */
+            background-color: #121212; /* خلفية داكنة */
+            color: #e0e0e0; /* نص فاتح */
         }
 
         .pdf-container {
-            background-color: #1e1e1e; /* خلفية الحاوية الرئيسية */
-            color: #e0e0e0;
+            background-color: #1e1e1e; /* حاوية المحتوى أفتح قليلاً */
             border: 1px solid #333;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
 
         .navbar {
-            background-color: #000000; /* شريط التنقل باللون الأسود */
+            background-color: #000000 !important; /* شريط التنقل أسود */
         }
 
         .navbar a {
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
         .purple-banner {
-            background-color: #311b92; /* بنفسجي داكن للبانر */
+            background-color: #311b92 !important; /* بنفسجي داكن للبانر */
             color: #ffffff;
         }
 
@@ -38,8 +38,8 @@
         }
 
         th {
-            background-color: #333333;
-            color: #bb86fc; /* لون مميز لرؤوس الجداول */
+            background-color: #333333 !important;
+            color: #bb86fc !important; /* لون أرجواني فاتح للعناوين جذاب في الداكن */
             border: 1px solid #444;
         }
 
@@ -74,7 +74,7 @@
             display: block;
         }
         .book-item p a {
-            color: #bb86fc !important; /* لون الروابط في الوضع الداكن */
+            color: #bb86fc !important; /* لون الروابط */
         }
         
         .section-heading {
@@ -91,6 +91,7 @@
         }
 
         footer {
+            background-color: #000;
             color: #888;
         }
     </style>
