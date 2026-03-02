@@ -1,18 +1,15 @@
-/* =========================================
-   التنسيقات الأساسية (Light Mode) - كودك الأصلي
-   ========================================= */
 html {
     scroll-behavior: smooth;
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding-top: 70px; 
+    padding-top: 70px; /* ترك مساحة للمنيو الثابت */
     background-color: #f9f9f9;
     color: #333;
-    transition: background-color 0.3s, color 0.3s; /* انتقال ناعم بين الأوضاع */
 }
 
+/* القائمة العلوية الثابتة */
 .navbar {
     position: fixed;
     top: 0;
@@ -40,6 +37,7 @@ body {
     font-weight: bold;
 }
 
+/* تنسيق الجداول لتكون احترافية */
 table {
     width: 90%;
     margin: 20px auto;
@@ -57,6 +55,7 @@ th {
     background-color: #ecf0f1;
 }
 
+/* تنسيق المراجع (صورة بجانب العنوان) */
 .reference-item {
     display: flex;         
     align-items: center;   
@@ -68,115 +67,250 @@ th {
     margin: 20px 0;
 }
 
-/* --- التنسيقات التي نقلناها من ملف الـ HTML إلى هنا لترتيب الكود --- */
-.book-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 15px;
-}
-.book-item {
-    display: flex;
-    align-items: center; 
-    gap: 15px; 
-}
 .reference-item img {
+    width: 120px;          
+    height: auto;          
     border: 1px solid #ddd;
-    border-radius: 4px;
-    display: block;
 }
-.book-item p {
-    margin: 0;
-    line-height: 1.4;
+
+.reference-item a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.reference-item a:hover {
+    color: #3498db;
+    text-decoration: underline; 
+}
+
+
+/* =========================================
+   تنسيقات صفحة فريق العمل (Team Page)
+   ========================================= */
+
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    padding: 30px 20px;
+    width: 260px; 
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.team-card:hover {
+    transform: translateY(-10px); 
+}
+
+.team-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid #2c3e50; 
+    margin-bottom: 15px;
+}
+
+.team-card h4 {
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.team-card .email {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+    word-break: break-all; 
+}
+
+/* =================================================
+   تنسيقات خاصة للجوال (Mobile Responsive)
+   ================================================= */
+@media screen and (max-width: 768px) {
+
+    /* 1. القائمة العلوية: تنزل العناصر لسطر جديد إذا ما كفت */
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .navbar li {
+        margin: 3px 8px; /* تقليل المسافة بين الروابط */
+    }
+
+    /* زيادة المسافة العلوية للصفحة لأن القائمة صارت سطرين */
+    body {
+        padding-top: 140px; 
+    }
+
+    /* 2. الجدول: الحل السحري للسحب يمين ويسار */
+    table {
+        display: block;
+        overflow-x: auto; /* يسمح بالتمرير الأفقي */
+        white-space: nowrap; /* يمنع النص من الانعفاس */
+        width: 100%;
+    }
+
+    /* 3. تصغير العناوين الكبيرة */
+    h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    /* 4. تنسيق البطاقات والمراجع لتكون تحت بعض */
+    .reference-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-container {
+        gap: 20px;
+    }
+}
+
+/* تنسيق صفوف العناوين في جدول مخرجات التعلم لتطابق الصورة */
+.clo-header {
+    background-color: #4db6ac !important; /* اللون السماوي من الصورة */
+    color: white !important;
+}
+
+.main-table-header {
+    background-color: #3f51b5 !important; /* اللون الكحلي لرأس الجدول */
+    color: white !important;
 }
 
 /* =========================================
-   إضافة: تنسيقات الوضع الداكن (Dark Mode) 
+   إضافات بسيطة للأقسام الجديدة فقط
    ========================================= */
 
-/* هذه التنسيقات ستعمل فقط في الصفحات التي تحتوي على <body class="dark-mode"> */
+/* عنوان فرعي بالفيروزي كما في اللقطة */
+.accent-title{
+    color:#00a6ce;
+    margin: 28px auto 8px;
+    width: 90%;
+}
+.accent-title .muted{
+    color:#666; font-weight: normal; font-size: .95em;
+}
+
+/* جدول بنفسجي للرأس (لا يؤثر على بقية الجداول) */
+.uqu-table{
+    width: 90%;
+    margin: 12px auto 24px;
+    border-collapse: collapse;
+    background: #fff;
+}
+.uqu-table th, .uqu-table td{
+    border: 1px solid #d9dde3;
+    padding: 12px;
+    text-align: start;
+}
+.uqu-table thead th{
+    background: #4f2d7f;  /* بنفسجي غامق */
+    color: #fff;
+    font-weight: 700;
+}
+.uqu-table tbody tr:nth-child(even){
+    background: #fafafa;
+}
+
+/* قائمة فرعية داخل خلية "Hybrid" */
+.uqu-sublist{
+    margin:.35rem 0 .35rem 1.25rem;
+}
+
+/* صف الإجمالي بالفيروزي */
+.total-row td{
+    background:#00a6ce; color:#fff; font-weight:700;
+}
+
+
+/* =======================================================
+   إضافة: تنسيقات الوضع الداكن (Dark Mode) بدون أي تعديل للأعلى
+   ======================================================= */
 
 body.dark-mode {
-    background-color: #121212; /* خلفية داكنة جداً */
-    color: #e0e0e0; /* نص فاتح */
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
 }
 
-.dark-mode .pdf-container {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
+body.dark-mode .navbar {
+    background-color: #000000 !important;
 }
 
-.dark-mode .navbar {
-    background-color: #000000; /* بار أسود بالكامل */
+body.dark-mode table,
+body.dark-mode .uqu-table {
+    background-color: #252525 !important;
+    border-color: #444 !important;
 }
 
-.dark-mode table {
-    background-color: #252525;
-    border-color: #444;
+body.dark-mode th,
+body.dark-mode .uqu-table thead th {
+    background-color: #333333 !important;
+    color: #bb86fc !important;
+    border-color: #444 !important;
 }
 
-.dark-mode th {
-    background-color: #333333;
-    color: #bb86fc; /* لون أرجواني فاتح للعناوين - جذاب في الداكن */
-    border: 1px solid #444;
+body.dark-mode td,
+body.dark-mode .uqu-table td {
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
 }
 
-.dark-mode td {
-    border: 1px solid #444;
-    color: #e0e0e0;
+body.dark-mode .reference-item {
+    background-color: #252525 !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
 }
 
-.dark-mode .reference-item {
-    background-color: #252525;
-    border: 1px solid #333;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+body.dark-mode .reference-item a {
+    color: #bb86fc !important;
 }
 
-.dark-mode .reference-item a {
-    color: #bb86fc; /* روابط بلون متناسق مع الوضع الداكن */
+body.dark-mode .purple-banner {
+    background-color: #311b92 !important;
+    color: #ffffff !important;
 }
 
-.dark-mode .purple-banner {
-    background-color: #311b92; /* بنفسجي أغمق يتناسب مع السواد */
+body.dark-mode .v-row {
+    border-bottom: 1px solid #333 !important;
 }
 
-.dark-mode .v-row {
-    border-bottom: 1px solid #333;
+body.dark-mode .v-row span {
+    color: #aaa !important;
 }
 
-.dark-mode .v-row span {
-    color: #aaa;
+body.dark-mode .team-card {
+    background-color: #1e1e1e !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
 }
 
-.dark-mode footer {
-    background-color: #121212;
-    color: #777;
-    border-top: 1px solid #333;
+body.dark-mode .team-card h4 {
+    color: #bb86fc !important;
 }
 
-/* تعديل ألوان القائمة الثابتة في الداكن */
-.dark-mode .navbar a:hover {
-    color: #bb86fc;
+body.dark-mode .team-card .email {
+    color: #aaa !important;
 }
 
-/* --- إضافات بسيطة لضمان عمل الداكن على جميع العناصر --- */
-.dark-mode .info-box {
-    background-color: #252525;
-    border: 1px solid #444;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.dark-mode .total-row td {
-    background-color: #333;
-    font-weight: bold;
-}
-
-.dark-mode .section-heading {
-    color: #bb86fc;
-    border-bottom: 2px solid #333;
-}
-
-.dark-mode hr.page-divider {
-    border-top: 1px solid #333;
+body.dark-mode .uqu-table tbody tr:nth-child(even) {
+    background: #1e1e1e !important;
 }
