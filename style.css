@@ -1,5 +1,5 @@
 /* =========================================
-   التنسيقات الأساسية (Light Mode) - ألوان التوصيف الرسمية
+   التنسيقات الأساسية (Light Mode) - ألوان التوصيف الرسمية NCAAA
    ========================================= */
 html {
     scroll-behavior: smooth;
@@ -13,7 +13,7 @@ body {
     transition: background-color 0.3s, color 0.3s; 
 }
 
-/* القائمة العلوية الثابتة - تم التعديل للبنفسجي الرسمي ETEC */
+/* القائمة العلوية الثابتة */
 .navbar {
     position: fixed;
     top: 0;
@@ -21,7 +21,7 @@ body {
     background-color: #4f2d7f; /* لون هيئة تقويم التعليم والتدريب */
     padding: 10px 0;
     z-index: 1000;
-    border-bottom: 3px solid #00a6ce; /* خط سماوي تجميلي من ألوان الهيئة */
+    border-bottom: 3px solid #00a6ce; 
 }
 
 .navbar ul {
@@ -44,7 +44,58 @@ body {
 }
 
 .navbar a:hover {
-    color: #00a6ce; /* يتغير للسماوي عند تمرير الماوس */
+    color: #00a6ce; 
+}
+
+/* =========================================
+   تنسيقات التوصيف الرسمي (المستطيلات والجداول)
+   ========================================= */
+
+/* العناوين الأساسية A, B, C... */
+.section-heading {
+    color: #4f2d7f;
+    background-color: #eef2f5; /* خلفية رمادية فاتحة للعناوين */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px 5%;
+}
+
+.sub-heading {
+    color: #00a6ce;
+    margin: 20px 5%;
+}
+
+/* المستطيلات البنفسجية حقت المعلومات (مثل 1. Credit hours) */
+.info-box > p {
+    background-color: #4f2d7f;
+    color: #ffffff;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin: 10px 5%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-box > p > strong {
+    color: #ffffff; /* عشان الكلام العريض يصير أبيض داخل المستطيل */
+}
+
+/* المربعات البيضاء اللي تجي تحت المستطيلات (مثل الخيارات والقوائم) */
+.course-type-options, .clean-list {
+    background-color: #ffffff;
+    border: 1px solid #d9dde3;
+    padding: 15px;
+    border-radius: 4px;
+    margin: -5px 5% 15px 5%; /* تسحب المربع ليكون تحت المستطيل مباشرة */
+}
+
+.course-type-options p {
+    color: #333; /* نرجع لون النص طبيعي هنا */
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.course-type-options p strong {
+    color: #4f2d7f;
 }
 
 /* تنسيق الجداول لتكون مطابقة لملف التوصيف */
@@ -56,25 +107,28 @@ table {
 }
 
 th, td {
-    border: 1px solid #d9dde3; /* لون حدود خفيف مطابق للملف */
+    border: 1px solid #d9dde3;
     padding: 12px;
-    text-align: start;
+    text-align: center; /* توسيط النص زي التوصيف الرسمي */
 }
 
 th {
-    background-color: #eef2f5; /* لون رمادي مزرق فاتح لرؤوس الجداول */
+    background-color: #eef2f5; /* لون رمادي مزرق فاتح לרؤوس الجداول */
     color: #4f2d7f; /* نص العناوين بالبنفسجي */
     font-weight: bold;
 }
 
-/* تنسيق العناوين الأساسية في الصفحة */
-.section-heading, .sub-heading {
-    color: #4f2d7f; /* العناوين بالبنفسجي الرسمي */
-    margin-right: 5%;
-    margin-left: 5%;
+/* صف الإجمالي بالسماوي الرسمي */
+.total-row td {
+    background:#00a6ce; 
+    color:#fff; 
+    font-weight:700;
 }
 
-/* تنسيق المراجع (صورة بجانب العنوان) */
+/* =========================================
+   باقي التنسيقات (المراجع، الفريق، الجوال)
+   ========================================= */
+
 .reference-item {
     display: flex;         
     align-items: center;   
@@ -108,120 +162,22 @@ th {
     margin: 0;
     line-height: 1.4;
 }
-
 .book-item p a {
-    color: #00a6ce !important; /* لون الروابط السماوي الرسمي */
+    color: #00a6ce !important; 
 }
 .book-item p a:hover {
     color: #4f2d7f !important;
     text-decoration: underline; 
 }
 
-/* =========================================
-   تنسيقات صفحة فريق العمل (Team Page)
-   ========================================= */
-
-.team-section {
-    text-align: center;
-    padding: 40px 20px;
+ol {
+    margin-right: 5%;
+    margin-left: 5%;
+    line-height: 1.8;
 }
 
-.team-container {
-    display: flex;
-    justify-content: center; 
-    gap: 30px; 
-    flex-wrap: wrap; 
-    margin-top: 20px;
-}
-
-.team-card {
-    background-color: #ffffff;
-    border-radius: 15px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-    padding: 30px 20px;
-    width: 260px; 
-    text-align: center;
-    transition: transform 0.3s ease; 
-    border-top: 4px solid #00a6ce; /* لمسة سماوية للبطاقات */
-}
-
-.team-card:hover {
-    transform: translateY(-10px); 
-}
-
-.team-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 4px solid #4f2d7f; /* إطار بنفسجي للصور */
-    margin-bottom: 15px;
-}
-
-.team-card h4 {
-    color: #4f2d7f;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.team-card .email {
-    font-size: 0.85em;
-    color: #777;
-    margin-top: 10px;
-    word-break: break-all; 
-}
-
-/* =================================================
-   تنسيقات خاصة للجوال (Mobile Responsive)
-   ================================================= */
-@media screen and (max-width: 768px) {
-    .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px;
-    }
-    .navbar li {
-        margin: 3px 8px; 
-    }
-    body {
-        padding-top: 140px; 
-    }
-    table {
-        display: block;
-        overflow-x: auto; 
-        white-space: nowrap; 
-        width: 100%;
-    }
-    h1 {
-        font-size: 20px;
-        padding: 0 10px;
-    }
-    .reference-item {
-        flex-direction: column;
-        text-align: center;
-    }
-    .team-container {
-        gap: 20px;
-    }
-}
-
-/* =========================================
-   إضافات بسيطة للأقسام الجديدة فقط
-   ========================================= */
-
-.accent-title{
-    color:#00a6ce;
-    margin: 28px auto 8px;
-    width: 90%;
-}
-.accent-title .muted{
-    color:#666; font-weight: normal; font-size: .95em;
-}
-
-/* البانر والجدول الرأسي */
 .purple-banner {
-    background-color: #4f2d7f; /* البنفسجي الرسمي */
+    background-color: #4f2d7f; 
     color: white;
     text-align: center;
     padding: 15px;
@@ -237,23 +193,61 @@ th {
     padding: 15px;
 }
 
-/* صف الإجمالي بالسماوي الرسمي */
-.total-row td{
-    background:#00a6ce; 
-    color:#fff; 
-    font-weight:700;
+/* صفحة فريق العمل */
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+.team-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+.team-card {
+    background-color: #ffffff;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    padding: 30px 20px;
+    width: 260px; 
+    text-align: center;
+    transition: transform 0.3s ease; 
+    border-top: 4px solid #00a6ce; 
+}
+.team-card:hover {
+    transform: translateY(-10px); 
+}
+.team-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid #4f2d7f; 
+    margin-bottom: 15px;
+}
+.team-card h4 {
+    color: #4f2d7f;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.team-card .email {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+    word-break: break-all; 
 }
 
-/* تنسيق القائمة المرقمة */
-ol {
-    margin-right: 5%;
-    margin-left: 5%;
-    line-height: 1.8;
+@media screen and (max-width: 768px) {
+    .navbar ul { flex-wrap: wrap; justify-content: center; padding: 5px; }
+    .navbar li { margin: 3px 8px; }
+    body { padding-top: 140px; }
+    table { display: block; overflow-x: auto; white-space: nowrap; width: 100%; }
+    h1 { font-size: 20px; padding: 0 10px; }
+    .reference-item { flex-direction: column; text-align: center; }
+    .team-container { gap: 20px; }
 }
-.clean-list {
-    line-height: 1.8;
-}
-
 
 /* =======================================================
    إضافة: تنسيقات الوضع الداكن (Dark Mode)
@@ -266,7 +260,7 @@ body.dark-mode {
 
 body.dark-mode .navbar {
     background-color: #0a0a0a !important;
-    border-bottom: 3px solid #005b73 !important; /* سماوي داكن */
+    border-bottom: 3px solid #005b73 !important; 
 }
 
 body.dark-mode table,
@@ -277,7 +271,7 @@ body.dark-mode .vertical-table {
 
 body.dark-mode th {
     background-color: #2a2a2a !important;
-    color: #bb86fc !important; /* لون أرجواني فاتح يتناسب مع الداكن */
+    color: #bb86fc !important; 
     border-color: #444 !important;
 }
 
@@ -297,15 +291,35 @@ body.dark-mode .book-item p a {
     color: #bb86fc !important;
 }
 
-body.dark-mode .section-heading, 
-body.dark-mode .sub-heading {
+/* عكس ألوان العناوين والمستطيلات للداكن */
+body.dark-mode .section-heading {
+    background-color: #1e1e1e !important;
     color: #bb86fc !important;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+}
+
+body.dark-mode .info-box > p {
+    background-color: #311b92 !important; 
+    color: #ffffff !important;
+    border: 1px solid #444;
+}
+
+body.dark-mode .course-type-options,
+body.dark-mode .clean-list {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .course-type-options p {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .course-type-options p strong {
+    color: #bb86fc !important;
 }
 
 body.dark-mode .purple-banner {
-    background-color: #2c1a4d !important; /* بنفسجي أغمق جداً للداكن */
+    background-color: #2c1a4d !important; 
     color: #ffffff !important;
 }
 
@@ -333,7 +347,7 @@ body.dark-mode .team-card .email {
 }
 
 body.dark-mode .total-row td {
-    background-color: #005b73 !important; /* سماوي داكن لصف الإجمالي */
+    background-color: #005b73 !important; 
     color: #fff !important;
 }
 
