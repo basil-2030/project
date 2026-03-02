@@ -13,12 +13,11 @@ body {
     transition: background-color 0.3s, color 0.3s; 
 }
 
-/* القائمة العلوية الثابتة */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #4f2d7f; /* لون هيئة تقويم التعليم والتدريب */
+    background-color: #4f2d7f; 
     padding: 10px 0;
     z-index: 1000;
     border-bottom: 3px solid #00a6ce; 
@@ -51,10 +50,9 @@ body {
    تنسيقات التوصيف الرسمي (المستطيلات والجداول)
    ========================================= */
 
-/* العناوين الأساسية A, B, C... */
 .section-heading {
     color: #4f2d7f;
-    background-color: #eef2f5; /* خلفية رمادية فاتحة للعناوين */
+    background-color: #eef2f5; 
     padding: 10px 15px;
     border-radius: 5px;
     margin: 20px 5%;
@@ -65,7 +63,6 @@ body {
     margin: 20px 5%;
 }
 
-/* المستطيلات البنفسجية حقت المعلومات (مثل 1. Credit hours) */
 .info-box > p {
     background-color: #4f2d7f;
     color: #ffffff;
@@ -76,20 +73,19 @@ body {
 }
 
 .info-box > p > strong {
-    color: #ffffff; /* عشان الكلام العريض يصير أبيض داخل المستطيل */
+    color: #ffffff; 
 }
 
-/* المربعات البيضاء اللي تجي تحت المستطيلات (مثل الخيارات والقوائم) */
 .course-type-options, .clean-list {
     background-color: #ffffff;
     border: 1px solid #d9dde3;
     padding: 15px;
     border-radius: 4px;
-    margin: -5px 5% 15px 5%; /* تسحب المربع ليكون تحت المستطيل مباشرة */
+    margin: -5px 5% 15px 5%; 
 }
 
 .course-type-options p {
-    color: #333; /* نرجع لون النص طبيعي هنا */
+    color: #333; 
     font-weight: bold;
     margin: 5px 0;
 }
@@ -98,7 +94,6 @@ body {
     color: #4f2d7f;
 }
 
-/* تنسيق الجداول لتكون مطابقة لملف التوصيف */
 table {
     width: 90%;
     margin: 20px auto;
@@ -109,20 +104,44 @@ table {
 th, td {
     border: 1px solid #d9dde3;
     padding: 12px;
-    text-align: center; /* توسيط النص زي التوصيف الرسمي */
+    text-align: center; 
 }
 
 th {
-    background-color: #eef2f5; /* لون رمادي مزرق فاتح לרؤوس الجداول */
-    color: #4f2d7f; /* نص العناوين بالبنفسجي */
+    background-color: #eef2f5; 
+    color: #4f2d7f; 
     font-weight: bold;
 }
 
-/* صف الإجمالي بالسماوي الرسمي */
 .total-row td {
     background:#00a6ce; 
     color:#fff; 
     font-weight:700;
+}
+
+/* =========================================
+   تنسيقات جدول CLOs (مطابقة لصورة التوصيف)
+   ========================================= */
+#clos table th {
+    background-color: #4f2d7f !important;
+    color: #ffffff !important;
+}
+
+#clos table .category-row td {
+    background-color: #4db6ac !important; /* اللون التركواز/السماوي */
+    color: #ffffff !important;
+    font-weight: bold;
+    text-align: left; /* لليسار في الانجليزي وبيتعدل تلقائي للعربي */
+}
+
+/* تلوين الأعمدة (الرمز، ورمز البرنامج) بالرمادي الفاتح زي التوصيف */
+#clos table tbody tr:not(.category-row) td:nth-child(1),
+#clos table tbody tr:not(.category-row) td:nth-child(3) {
+    background-color: #f4f6f8;
+}
+
+html[dir="rtl"] #clos table .category-row td {
+    text-align: right;
 }
 
 /* =========================================
@@ -193,7 +212,6 @@ ol {
     padding: 15px;
 }
 
-/* صفحة فريق العمل */
 .team-section {
     text-align: center;
     padding: 40px 20px;
@@ -291,7 +309,6 @@ body.dark-mode .book-item p a {
     color: #bb86fc !important;
 }
 
-/* عكس ألوان العناوين والمستطيلات للداكن */
 body.dark-mode .section-heading {
     background-color: #1e1e1e !important;
     color: #bb86fc !important;
@@ -353,4 +370,19 @@ body.dark-mode .total-row td {
 
 body.dark-mode hr.page-divider {
     border-top: 1px solid #333 !important;
+}
+
+/* الوضع الداكن لجدول CLOs */
+body.dark-mode #clos table th {
+    background-color: #1e1e1e !important;
+    color: #bb86fc !important;
+    border: 1px solid #444 !important;
+}
+body.dark-mode #clos table .category-row td {
+    background-color: #005b73 !important;
+    color: #ffffff !important;
+}
+body.dark-mode #clos table tbody tr:not(.category-row) td:nth-child(1),
+body.dark-mode #clos table tbody tr:not(.category-row) td:nth-child(3) {
+    background-color: #252525 !important;
 }
