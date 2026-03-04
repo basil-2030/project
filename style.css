@@ -1,6 +1,4 @@
-/* =========================================
-   التنسيقات الأساسية (Light Mode) - ألوان التوصيف الرسمية NCAAA
-   ========================================= */
+
 html {
     scroll-behavior: smooth;
 }
@@ -46,9 +44,7 @@ body {
     color: #00a6ce; 
 }
 
-/* =========================================
-   تنسيقات التوصيف الرسمي (المستطيلات والجداول العريضة)
-   ========================================= */
+
 
 .pdf-container {
     width: 98%; 
@@ -56,7 +52,7 @@ body {
     margin: 0 auto;
 }
 
-/* العناوين الأساسية بالبنفسجي */
+
 .section-heading {
     color: #ffffff; 
     background-color: #4f2d7f; 
@@ -70,7 +66,7 @@ body {
     margin: 20px 2%;
 }
 
-/* الأشرطة العرضية للمعلومات بالبنفسجي */
+
 .info-bar {
     background-color: #4f2d7f;
     color: #ffffff;
@@ -116,7 +112,7 @@ th, td {
     text-align: center; 
 }
 
-/* 🟢 هذا الكود هو اللي بيلون لك كل الجداول اللي طلبتها 🟢 */
+
 th {
     background-color: #4f2d7f; 
     color: #ffffff; 
@@ -129,9 +125,7 @@ th {
     font-weight:700;
 }
 
-/* =========================================
-   تنسيقات جدول CLOs 
-   ========================================= */
+
 #clos table th {
     background-color: #4f2d7f !important;
     color: #ffffff !important;
@@ -153,9 +147,7 @@ html[dir="rtl"] #clos table .category-row td {
     text-align: right;
 }
 
-/* =========================================
-   باقي التنسيقات (المراجع، الفريق، الجوال)
-   ========================================= */
+
 
 .reference-item {
     display: flex;         
@@ -249,9 +241,6 @@ ol {
     .v-row span { width: auto; display: block; }
 }
 
-/* =======================================================
-   تنسيقات الوضع الداكن (Dark Mode)
-   ======================================================= */
 
 body.dark-mode { background-color: #121212 !important; color: #e0e0e0 !important; }
 body.dark-mode .navbar { background-color: #0a0a0a !important; border-bottom: 3px solid #005b73 !important; }
@@ -261,7 +250,7 @@ body.dark-mode td { border-color: #444 !important; color: #e0e0e0 !important; }
 body.dark-mode .reference-item { background-color: #1e1e1e !important; border: 1px solid #333 !important; box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important; }
 body.dark-mode .reference-item a, body.dark-mode .book-item p a { color: #bb86fc !important; }
 
-/* ألوان العناوين والأشرطة في الوضع الداكن */
+
 body.dark-mode .section-heading { background-color: #1e1e1e !important; color: #bb86fc !important; }
 body.dark-mode .info-bar { background-color: #311b92 !important; color: #ffffff !important; border: 1px solid #444; }
 body.dark-mode .info-content { color: #e0e0e0 !important; }
