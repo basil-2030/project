@@ -51,8 +51,8 @@ body {
    ========================================= */
 
 .section-heading {
-    color: #4f2d7f;
-    background-color: #eef2f5; 
+    color: #ffffff; /* تم التعديل: النص أصبح أبيض */
+    background-color: #4f2d7f; /* تم التعديل: الخلفية بنفسجية مثل القائمة العلوية */
     padding: 10px 15px;
     border-radius: 5px;
     margin: 20px 5%;
