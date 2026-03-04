@@ -51,8 +51,8 @@ body {
    ========================================= */
 
 .section-heading {
-    color: #ffffff; /* تم التعديل: النص أصبح أبيض */
-    background-color: #4f2d7f; /* تم التعديل: الخلفية بنفسجية مثل القائمة العلوية */
+    color: #ffffff; 
+    background-color: #4f2d7f; 
     padding: 10px 15px;
     border-radius: 5px;
     margin: 20px 5%;
@@ -107,9 +107,10 @@ th, td {
     text-align: center; 
 }
 
+/* تم التعديل هنا: رؤوس الجداول أصبحت باللون البنفسجي والنص أبيض */
 th {
-    background-color: #eef2f5; 
-    color: #4f2d7f; 
+    background-color: #4f2d7f; 
+    color: #ffffff; 
     font-weight: bold;
 }
 
@@ -131,10 +132,9 @@ th {
     background-color: #4db6ac !important; /* اللون التركواز/السماوي */
     color: #ffffff !important;
     font-weight: bold;
-    text-align: left; /* لليسار في الانجليزي وبيتعدل تلقائي للعربي */
+    text-align: left; 
 }
 
-/* تلوين الأعمدة (الرمز، ورمز البرنامج) بالرمادي الفاتح زي التوصيف */
 #clos table tbody tr:not(.category-row) td:nth-child(1),
 #clos table tbody tr:not(.category-row) td:nth-child(3) {
     background-color: #f4f6f8;
